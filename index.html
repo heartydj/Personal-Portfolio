@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Sticky Navigation -->
-  <nav id="navbar">
+  <nav id="navbar" data-aos="fade-down">
     <div class="nav-content">
       <span class="logo">DJ</span>
       <ul>
@@ -23,7 +24,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" id="hero">
+  <header class="hero" id="hero" data-aos="fade-up">
     <div class="hero-content">
       <h1>Dharani Jayan E</h1>
       <p class="subtitle">UI/UX & Graphic Designer <span class="dot">•</span> Erode, India</p>
@@ -40,13 +41,13 @@
   </header>
 
   <!-- Social Cards -->
-  <div class="social-cards">
+  <div class="social-cards" data-aos="fade-up">
     <a href="https://github.com/heartydj" class="social-card github" target="_blank" rel="noopener">
       <img src="github.svg" alt="GitHub" class="social-icon"/>
       <span>GitHub</span>
     </a>
     <a href="https://www.linkedin.com/in/dharani-jayan-e-6544432b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-card linkedin" target="_blank" rel="noopener">
-      <img src="linkedin.svg" alt="LinkedIn professional social network logo" class="social-icon"/>
+      <img src="linkedin.svg" alt="LinkedIn" class="social-icon"/>
       <span>LinkedIn</span>
     </a>
     <a href="mailto:dharanijayangmail.com" class="social-card gmail" target="_blank" rel="noopener">
@@ -55,7 +56,7 @@
     </a>
   </div>
 
-  <section class="about section" id="about">
+  <section class="about section" id="about" data-aos="fade-right">
     <h2>About Me</h2>
     <div class="about-content">
       <img src="dj.jpg" alt="Dharani Jayan E Profile Photo" class="about-photo"/>
@@ -65,80 +66,83 @@
     </div>
   </section>
 
-  <!-- Projects Section (with descriptions) -->
+  <!-- Projects Section (AOS on project cards) -->
   <section class="projects section" id="projects">
-    <h2>Featured Work</h2>
+    <h2 data-aos="fade-right">Featured Work</h2>
     <div class="project-grid">
-      <div class="project-card interactive" tabindex="0">
+      <div class="project-card interactive" tabindex="0" data-aos="fade-up">
         <img src="LH44.png" alt="Lewis Hamilton F1 Design" class="project-image" onclick="openModal(this.src, this.alt)" />
         <div class="project-info">
           <h3>Lewis Hamilton Tribute</h3>
           <span>Design</span>
           <p>
+            
             <strong>Tools:</strong> Photoshop, Illustrator, Figma<br>
             <strong>Purpose:</strong> Celebrate the spirit and technical mastery of Lewis Hamilton’s F1 journey using advanced photo editing, blend modes, and racing-inspired overlays.
           </p>
         </div>
       </div>
-      <div class="project-card interactive" tabindex="0">
+      <div class="project-card interactive" tabindex="0" data-aos="fade-up" data-aos-delay="100">
         <img src="CR7.png" alt="Cristiano Ronaldo Tribute" class="project-image" onclick="openModal(this.src, this.alt)" />
         <div class="project-info">
           <h3>Cristiano Ronaldo Career Poster</h3>
           <span>Design</span>
           <p>
+
             <strong>Tools:</strong> Canva, Photoshop<br>
             <strong>Purpose:</strong> Tell CR7’s football journey, highlighting awards, records, and iconic career moments. Layered composition and smart use of blending modes.
           </p>
         </div>
       </div>
-      <div class="project-card interactive" tabindex="0">
+      <div class="project-card interactive" tabindex="0" data-aos="fade-up" data-aos-delay="200">
         <img src="GT3 RS.png" alt="Porsche GT3 RS Poster" class="project-image" onclick="openModal(this.src, this.alt)" />
         <div class="project-info">
           <h3>Porsche GT3 RS Poster</h3>
           <span>Design</span>
           <p>
+
             <strong>Tools:</strong> Photoshop, Figma<br>
             <strong>Purpose:</strong> Illustrate the technical beauty and power of the GT3 RS. Multiple perspectives and overlays used for depth.
           </p>
         </div>
       </div>
-      <div class="project-card interactive" tabindex="0">
+      <div class="project-card interactive" tabindex="0" data-aos="fade-up" data-aos-delay="300">
         <img src="Lamborghini.png" alt="Lamborghini Invencible Poster" class="project-image" onclick="openModal(this.src, this.alt)" />
         <div class="project-info">
           <h3>Lamborghini Invencible</h3>
           <span>Design</span>
           <p>
-            
+
             <strong>Tools:</strong> Photoshop, Illustrator<br>
             <strong>Purpose:</strong> Communicate the essence of a futuristic hypercar using dramatic lighting and geometric overlays for a collector’s vibe.
           </p>
         </div>
       </div>
-      <div class="project-card interactive" tabindex="0">
+      <div class="project-card interactive" tabindex="0" data-aos="fade-up" data-aos-delay="400">
         <img src="LM10.png" alt="Lionel Messi Tribute" class="project-image" onclick="openModal(this.src, this.alt)" />
         <div class="project-info">
           <h3>Lionel Messi - The GOAT</h3>
           <span>Design</span>
           <p>
-            <strong>Keywords:</strong> Soccer, FC Barcelona, PSG, Records, World Cup<br>
+
             <strong>Tools:</strong> Canva, Photoshop<br>
             <strong>Purpose:</strong> Multi-era design highlighting Messi’s legendary status, career transformations, and club triumphs, with spotlight color work and masking effects.
           </p>
         </div>
       </div>
-      <div class="project-card interactive" tabindex="0">
+      <div class="project-card interactive" tabindex="0" data-aos="fade-up" data-aos-delay="500">
         <img src="BMW M4.png" alt="BMW M4 CSL Poster" class="project-image" onclick="openModal(this.src, this.alt)" />
         <div class="project-info">
           <h3>BMW M4 CSL Poster</h3>
           <span>Design</span>
           <p>
-            
+
             <strong>Tools:</strong> Figma, Photoshop<br>
             <strong>Purpose:</strong> Emphasize speed and engineering mastery using collage, split-view, and accent color grading for a race-inspired poster.
           </p>
         </div>
       </div>
-      <!-- Add your original text-based projects if you like, as additional cards -->
+      <!-- Add more project cards as needed -->
     </div>
     <!-- Image Modal -->
     <div id="imageModal" class="modal">
@@ -149,7 +153,7 @@
   </section>
 
   <!-- Skills -->
-  <section class="skills section" id="skills">
+  <section class="skills section" id="skills" data-aos="fade-up">
     <h2>Design & Tech Skills</h2>
     <div class="skills-group">
       <span class="skill-tag">Figma</span>
@@ -166,25 +170,17 @@
   </section>
 
   <!-- Education -->
-  <section class="education section" id="education">
+  <section class="education section" id="education" data-aos="fade-up">
     <h2>Education</h2>
     <div class="education-timeline">
-      <div class="edu-item">
-        <strong>B.Tech, Information Technology</strong> <br>
-        Velalar College of Engineering & Technology<br>
-        <span>Nov 2022 – May 2026 (7th Sem, CGPA 7.8)</span>
-      </div>
-      <div class="edu-item">
-        <strong>XII – Biology</strong> <br>Sri Venketaswara Vidhalaya, 77.3% (2021-2022)
-      </div>
-      <div class="edu-item">
-        <strong>X</strong> <br>Sri Venketaswara Vidhalaya Matriculation, 90.6% (2019-2020)
-      </div>
+      <div class="edu-item"> <strong>B.Tech, Information Technology</strong> <br> Velalar College of Engineering & Technology<br> <span>Nov 2022 – May 2026 (7th Sem, CGPA 7.8)</span> </div>
+      <div class="edu-item"> <strong>XII – Biology</strong> <br>Sri Venketaswara Vidhalaya, 77.3% (2021-2022) </div>
+      <div class="edu-item"> <strong>X</strong> <br>Sri Venketaswara Vidhalaya Matriculation, 90.6% (2019-2020) </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <footer id="contact" class="section footer">
+  <footer id="contact" class="section footer" data-aos="fade-up">
     <h2>Let’s Connect!</h2>
     <div class="footer-contacts">
       <a href="mailto:dharanijayangmail.com" class="footer-contact">Email</a>
@@ -194,5 +190,13 @@
     <p>© 2025 Dharani Jayan E</p>
   </footer>
   <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-in-out'
+    });
+  </script>
 </body>
 </html>
