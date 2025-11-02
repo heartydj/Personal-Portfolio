@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dharani Jayan E – Designer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky Navigation -->
+  <nav id="navbar">
+    <div class="nav-content">
+      <span class="logo">DJ</span>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Dharani Jayan E</h1>
+      <p class="subtitle">UI/UX & Graphic Designer <span class="dot">•</span> Erode, India</p>
+      <div class="badges">
+        <span class="badge available">Available for Full Time</span>
+        <span class="badge freelance">Freelance/Project: Open</span>
+      </div>
+      <p class="hero-desc">
+        Versatile designer skilled in crafting user-friendly products.<br>
+        Let's create engaging experiences that captivate and inspire!
+      </p>
+      <a href="#contact" class="btn-primary">Hire Me</a>
+    </div>
+  </header>
+
+  <!-- Social Cards -->
+  <div class="social-cards">
+    <a href="https://github.com/heartydj" class="social-card github" target="_blank" rel="noopener">
+      <img src="github.jpg" alt="GitHub" class="social-icon"/>
+      <span>GitHub</span>
+    </a>
+    <a href="https://www.linkedin.com/in/dharani-jayan-e-6544432b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-card linkedin" target="_blank" rel="noopener">
+      <img src="linkedin.jpg" alt="LinkedIn" class="social-icon"/>
+      <span>LinkedIn</span>
+    </a>
+    <a href="mailto:dharanijayangmail.com" class="social-card gmail" target="_blank" rel="noopener">
+      <img src="gmail.jpg" alt="Gmail" class="social-icon"/>
+      <span>Gmail</span>
+    </a>
+  </div>
+
+  <section class="about section" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="dj.jpg" alt="Dharani Jayan E Profile Photo" class="about-photo"/>
+      <p>
+        I collaborate with teams to elevate user experience. Creative content writer, strong eye for detail and a passion for design. Ready to tackle new challenges and innovate in both digital products and storytelling.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section (with descriptions) -->
+  <section class="projects section" id="projects">
+    <h2>Featured Work</h2>
+    <div class="project-grid">
+      <div class="project-card interactive" tabindex="0">
+        <img src="LH44.jpg" alt="Lewis Hamilton F1 Design" class="project-image" onclick="openModal(this.src, this.alt)" />
+        <div class="project-info">
+          <h3>Lewis Hamilton Tribute</h3>
+          <span>Design</span>
+          <p>
+            <strong>Keywords:</strong> F1, Motorsport, Mercedes, Speed, Victory<br>
+            <strong>Tools:</strong> Photoshop, Illustrator, Figma<br>
+            <strong>Purpose:</strong> Celebrate the spirit and technical mastery of Lewis Hamilton’s F1 journey using advanced photo editing, blend modes, and racing-inspired overlays.
+          </p>
+        </div>
+      </div>
+      <div class="project-card interactive" tabindex="0">
+        <img src="CR7.jpg" alt="Cristiano Ronaldo Tribute" class="project-image" onclick="openModal(this.src, this.alt)" />
+        <div class="project-info">
+          <h3>Cristiano Ronaldo Career Poster</h3>
+          <span>Design</span>
+          <p>
+            <strong>Keywords:</strong> Football, Legends, Champions League, Trophies<br>
+            <strong>Tools:</strong> Canva, Photoshop<br>
+            <strong>Purpose:</strong> Tell CR7’s football journey, highlighting awards, records, and iconic career moments. Layered composition and smart use of blending modes.
+          </p>
+        </div>
+      </div>
+      <div class="project-card interactive" tabindex="0">
+        <img src="GT3-RS.jpg" alt="Porsche GT3 RS Poster" class="project-image" onclick="openModal(this.src, this.alt)" />
+        <div class="project-info">
+          <h3>Porsche GT3 RS Poster</h3>
+          <span>Design</span>
+          <p>
+            <strong>Keywords:</strong> Porsche, Supercar, Luxury, Performance, Racing<br>
+            <strong>Tools:</strong> Photoshop, Figma<br>
+            <strong>Purpose:</strong> Illustrate the technical beauty and power of the GT3 RS. Multiple perspectives and overlays used for depth.
+          </p>
+        </div>
+      </div>
+      <div class="project-card interactive" tabindex="0">
+        <img src="Lamborghini.jpg" alt="Lamborghini Invencible Poster" class="project-image" onclick="openModal(this.src, this.alt)" />
+        <div class="project-info">
+          <h3>Lamborghini Invencible</h3>
+          <span>Design</span>
+          <p>
+            <strong>Keywords:</strong> Lamborghini, Hypercar, Futuristic, V12, Collectible<br>
+            <strong>Tools:</strong> Photoshop, Illustrator<br>
+            <strong>Purpose:</strong> Communicate the essence of a futuristic hypercar using dramatic lighting and geometric overlays for a collector’s vibe.
+          </p>
+        </div>
+      </div>
+      <div class="project-card interactive" tabindex="0">
+        <img src="LM10.jpg" alt="Lionel Messi Tribute" class="project-image" onclick="openModal(this.src, this.alt)" />
+        <div class="project-info">
+          <h3>Lionel Messi - The GOAT</h3>
+          <span>Design</span>
+          <p>
+            <strong>Keywords:</strong> Soccer, FC Barcelona, PSG, Records, World Cup<br>
+            <strong>Tools:</strong> Canva, Photoshop<br>
+            <strong>Purpose:</strong> Multi-era design highlighting Messi’s legendary status, career transformations, and club triumphs, with spotlight color work and masking effects.
+          </p>
+        </div>
+      </div>
+      <div class="project-card interactive" tabindex="0">
+        <img src="BMW-M4.jpg" alt="BMW M4 CSL Poster" class="project-image" onclick="openModal(this.src, this.alt)" />
+        <div class="project-info">
+          <h3>BMW M4 CSL Poster</h3>
+          <span>Design</span>
+          <p>
+            <strong>Keywords:</strong> BMW M4 CSL, Motorsport, Carbon Fiber, Coupe, Engineering<br>
+            <strong>Tools:</strong> Figma, Photoshop<br>
+            <strong>Purpose:</strong> Emphasize speed and engineering mastery using collage, split-view, and accent color grading for a race-inspired poster.
+          </p>
+        </div>
+      </div>
+      <!-- Add your original text-based projects if you like, as additional cards -->
+    </div>
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills section" id="skills">
+    <h2>Design & Tech Skills</h2>
+    <div class="skills-group">
+      <span class="skill-tag">Figma</span>
+      <span class="skill-tag">Canva</span>
+      <span class="skill-tag">HTML/CSS</span>
+      <span class="skill-tag">Adobe Photoshop</span>
+      <span class="skill-tag">Capcut</span>
+      <span class="skill-tag">User Research</span>
+      <span class="skill-tag">Human Centric UI</span>
+      <span class="skill-tag">Video Editing</span>
+      <span class="skill-tag">Team Management</span>
+      <span class="skill-tag">Creative Thinking</span>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="education section" id="education">
+    <h2>Education</h2>
+    <div class="education-timeline">
+      <div class="edu-item">
+        <strong>B.Tech, Information Technology</strong> <br>
+        Velalar College of Engineering & Technology<br>
+        <span>Nov 2022 – May 2026 (7th Sem, CGPA 7.8)</span>
+      </div>
+      <div class="edu-item">
+        <strong>XII – Biology</strong> <br>Sri Venketaswara Vidhalaya, 77.3% (2021-2022)
+      </div>
+      <div class="edu-item">
+        <strong>X</strong> <br>Sri Venketaswara Vidhalaya Matriculation, 90.6% (2019-2020)
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="section footer">
+    <h2>Let’s Connect!</h2>
+    <div class="footer-contacts">
+      <a href="mailto:dharanijayangmail.com" class="footer-contact">Email</a>
+      <a href="tel:+917358987445" class="footer-contact">Call</a>
+    </div>
+    <p class="footer-note">Open for opportunities: Full Time, Freelance & Projects</p>
+    <p>© 2025 Dharani Jayan E</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
