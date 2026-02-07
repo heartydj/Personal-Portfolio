@@ -19,7 +19,6 @@
       --border: rgba(255, 255, 255, 0.1);
       --glass-bg: rgba(30, 41, 59, 0.7);
       --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      --glow: rgba(99, 102, 241, 0.4);
     }
 
     * {
@@ -68,7 +67,6 @@
       background: linear-gradient(135deg, var(--primary), var(--accent));
       top: -200px;
       left: -200px;
-      animation-delay: 0s;
     }
 
     .bg-animation::after {
@@ -118,8 +116,8 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       letter-spacing: -1px;
-      position: relative;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .logo:hover {
@@ -175,10 +173,6 @@
       transition: transform 0.3s ease;
     }
 
-    .mobile-menu-btn:hover {
-      transform: scale(1.1);
-    }
-
     /* Hero Section */
     .hero {
       min-height: 100vh;
@@ -187,13 +181,10 @@
       justify-content: center;
       text-align: center;
       padding: 8rem 2rem 4rem;
-      position: relative;
     }
 
     .hero-content {
       max-width: 1000px;
-      position: relative;
-      z-index: 1;
       animation: fadeInUp 1s ease-out;
     }
 
@@ -219,7 +210,6 @@
       font-weight: 600;
       color: var(--primary-light);
       margin-bottom: 2rem;
-      animation: fadeIn 1s ease-out 0.2s both;
     }
 
     .hero-content h1 {
@@ -229,7 +219,6 @@
       margin-bottom: 1.5rem;
       line-height: 1.1;
       letter-spacing: -2px;
-      animation: fadeIn 1s ease-out 0.4s both;
     }
 
     .hero-content h1 .gradient-text {
@@ -244,7 +233,6 @@
       color: var(--text-secondary);
       margin-bottom: 2.5rem;
       font-weight: 400;
-      animation: fadeIn 1s ease-out 0.6s both;
     }
 
     .hero-desc {
@@ -255,7 +243,6 @@
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
-      animation: fadeIn 1s ease-out 0.8s both;
     }
 
     .btn-group {
@@ -263,7 +250,6 @@
       gap: 1.5rem;
       justify-content: center;
       flex-wrap: wrap;
-      animation: fadeIn 1s ease-out 1s both;
     }
 
     .btn-primary, .btn-secondary {
@@ -272,34 +258,12 @@
       border-radius: 50px;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.3s ease;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-primary::before,
-    .btn-secondary::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .btn-primary:hover::before,
-    .btn-secondary:hover::before {
-      width: 300px;
-      height: 300px;
     }
 
     .btn-primary {
@@ -332,7 +296,6 @@
       justify-content: center;
       gap: 1rem;
       margin: 3rem 0;
-      animation: fadeIn 1s ease-out 1.2s both;
     }
 
     .social-link {
@@ -347,32 +310,12 @@
       justify-content: center;
       color: var(--text);
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .social-link::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      transform: translate(-50%, -50%);
-      transition: width 0.4s, height 0.4s;
-      z-index: -1;
-    }
-
-    .social-link:hover::before {
-      width: 100%;
-      height: 100%;
     }
 
     .social-link:hover {
       transform: translateY(-5px);
       border-color: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
       color: white;
     }
 
@@ -387,13 +330,11 @@
       max-width: 1400px;
       margin: 0 auto;
       padding: 6rem 2rem;
-      position: relative;
     }
 
     .section-header {
       text-align: center;
       margin-bottom: 4rem;
-      position: relative;
     }
 
     .section-label {
@@ -443,10 +384,6 @@
       box-shadow: var(--card-shadow);
     }
 
-    .about-image-wrapper {
-      position: relative;
-    }
-
     .about-photo {
       width: 100%;
       height: 280px;
@@ -454,12 +391,11 @@
       object-fit: cover;
       border: 3px solid var(--border);
       box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
-      transition: all 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
     .about-photo:hover {
       transform: scale(1.02);
-      box-shadow: 0 25px 70px rgba(99, 102, 241, 0.5);
     }
 
     .about-text p {
@@ -481,26 +417,8 @@
       border-radius: 24px;
       overflow: hidden;
       border: 1px solid var(--border);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.3s ease;
       cursor: pointer;
-      position: relative;
-    }
-
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      z-index: 0;
-    }
-
-    .project-card:hover::before {
-      opacity: 0.1;
     }
 
     .project-card:hover {
@@ -520,7 +438,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: transform 0.3s ease;
     }
 
     .project-card:hover .project-image {
@@ -535,7 +453,7 @@
       bottom: 0;
       background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.3s ease;
       display: flex;
       align-items: flex-end;
       padding: 2rem;
@@ -549,15 +467,10 @@
       color: white;
       font-weight: 600;
       font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
 
     .project-info {
       padding: 2rem;
-      position: relative;
-      z-index: 1;
     }
 
     .project-info h3 {
@@ -587,66 +500,6 @@
 
     .project-info strong {
       color: var(--text);
-      font-weight: 600;
-    }
-
-    /* Skills Section */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .skill-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--border);
-      padding: 2rem 1.5rem;
-      border-radius: 20px;
-      text-align: center;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skill-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      transform: scaleX(0);
-      transition: transform 0.4s ease;
-    }
-
-    .skill-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .skill-card:hover {
-      transform: translateY(-8px);
-      background: var(--surface);
-      border-color: var(--primary);
-      box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
-    }
-
-    .skill-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-
-    .skill-card:hover .skill-icon {
-      transform: scale(1.2) rotate(5deg);
-    }
-
-    .skill-name {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--text);
     }
 
     /* Development Projects */
@@ -662,39 +515,20 @@
       border: 1px solid var(--border);
       border-radius: 24px;
       padding: 2.5rem;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .dev-card::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 24px;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      z-index: -1;
-    }
-
-    .dev-card:hover::before {
-      opacity: 1;
+      transition: all 0.3s ease;
     }
 
     .dev-card:hover {
       transform: translateY(-12px);
       box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
+      border-color: var(--primary);
     }
 
     .dev-icon {
       font-size: 3.5rem;
       margin-bottom: 1.5rem;
-      display: inline-block;
-      transition: transform 0.4s ease;
+      display: block;
+      transition: transform 0.3s ease;
     }
 
     .dev-card:hover .dev-icon {
@@ -724,7 +558,6 @@
       color: var(--text-secondary);
       line-height: 1.7;
       margin-bottom: 2rem;
-      font-size: 1rem;
     }
 
     .dev-links {
@@ -743,26 +576,6 @@
       font-size: 0.9rem;
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .dev-link::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .dev-link:hover::before {
-      width: 300px;
-      height: 300px;
     }
 
     .dev-link:hover {
@@ -779,6 +592,47 @@
     .dev-link.secondary:hover {
       background: var(--primary);
       color: white;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+      background: var(--surface);
+      border-color: var(--primary);
+      box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover .skill-icon {
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    .skill-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
     }
 
     /* Education Timeline */
@@ -808,7 +662,7 @@
       padding-left: 5rem;
       border-radius: 20px;
       border: 1px solid var(--border);
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
       position: relative;
     }
 
@@ -827,7 +681,6 @@
 
     .edu-item:hover {
       transform: translateX(15px);
-      background: var(--surface);
       border-color: var(--primary);
       box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
     }
@@ -882,29 +735,8 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1rem;
       transition: all 0.3s ease;
       box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .footer-contact::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .footer-contact:hover::before {
-      width: 300px;
-      height: 300px;
     }
 
     .footer-contact:hover {
@@ -937,7 +769,6 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.95);
       backdrop-filter: blur(10px);
-      animation: fadeIn 0.3s ease;
     }
 
     .modal.open {
@@ -951,18 +782,6 @@
       max-height: 85vh;
       border-radius: 20px;
       box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-      animation: zoomIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    @keyframes zoomIn {
-      from {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
     }
 
     .close {
@@ -971,7 +790,6 @@
       right: 3rem;
       color: white;
       font-size: 3rem;
-      font-weight: 300;
       cursor: pointer;
       transition: all 0.3s ease;
       z-index: 2001;
@@ -987,7 +805,6 @@
 
     .close:hover {
       transform: scale(1.1) rotate(90deg);
-      background: rgba(255, 255, 255, 0.2);
     }
 
     #caption {
@@ -995,10 +812,9 @@
       color: white;
       font-size: 1.2rem;
       margin-top: 2rem;
-      font-weight: 500;
     }
 
-    /* Scroll to top button */
+    /* Scroll to top */
     .scroll-top {
       position: fixed;
       bottom: 2rem;
@@ -1013,11 +829,10 @@
       justify-content: center;
       cursor: pointer;
       box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.3s ease;
       opacity: 0;
       visibility: hidden;
       z-index: 999;
-      border: 2px solid rgba(255, 255, 255, 0.2);
       font-size: 1.5rem;
     }
 
@@ -1028,14 +843,13 @@
 
     .scroll-top:hover {
       transform: translateY(-8px) scale(1.1);
-      box-shadow: 0 12px 40px rgba(99, 102, 241, 0.7);
     }
 
     /* Reveal animations */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.6s ease-out;
+      transition: all 0.6s ease;
     }
 
     .reveal.active {
@@ -1061,7 +875,6 @@
         width: 100%;
         text-align: center;
         transition: left 0.4s ease;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         padding: 3rem 0;
         gap: 0;
         border-bottom: 1px solid var(--border);
@@ -1087,13 +900,10 @@
         padding: 2rem;
       }
 
-      .about-image-wrapper {
-        max-width: 250px;
-        margin: 0 auto;
-      }
-
       .about-photo {
         height: 250px;
+        max-width: 250px;
+        margin: 0 auto;
       }
 
       .project-grid {
@@ -1116,10 +926,6 @@
         height: 45px;
       }
 
-      .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      }
-
       .education-timeline::before {
         left: 20px;
       }
@@ -1135,27 +941,15 @@
       }
     }
 
-    /* Animation utilities */
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-
-    .pulse {
-      animation: pulse 2s ease-in-out infinite;
-    }
   </style>
 </head>
 <body>
-  <!-- Animated Background -->
   <div class="bg-animation"></div>
 
-  <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-content">
       <span class="logo">DJ</span>
@@ -1171,7 +965,6 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero" id="hero">
     <div class="hero-content">
       <div class="hero-label">✨ Available for Opportunities</div>
@@ -1191,17 +984,17 @@
         </a>
       </div>
       <div class="social-links">
-        <a href="https://github.com/heartydj" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+        <a href="https://github.com/heartydj" class="social-link" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
           </svg>
         </a>
-        <a href="https://www.linkedin.com/in/dharani-jayan-e-6544432b7" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/dharani-jayan-e-6544432b7" class="social-link" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24">
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
           </svg>
         </a>
-        <a href="mailto:dharanijayan@gmail.com" class="social-link" target="_blank" rel="noopener" aria-label="Email">
+        <a href="mailto:dharanijayan@gmail.com" class="social-link" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24">
             <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
           </svg>
@@ -1210,7 +1003,6 @@
     </div>
   </header>
 
-  <!-- About Section -->
   <section class="about section reveal" id="about">
     <div class="section-header">
       <div class="section-label">About Me</div>
@@ -1218,8 +1010,8 @@
       <p class="section-desc">Passionate about creating meaningful experiences through design</p>
     </div>
     <div class="about-content">
-      <div class="about-image-wrapper">
-        <img src="dj.jpg" alt="Dharani Jayan E" class="about-photo"/>
+      <div>
+        <img src="dj.jpg" alt="Dharani Jayan E" class="about-photo" onerror="this.src='https://via.placeholder.com/280x280/6366f1/ffffff?text=DJ'"/>
       </div>
       <div class="about-text">
         <p>
@@ -1233,17 +1025,16 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section class="projects section reveal" id="projects">
     <div class="section-header">
-      <div class="section-label">Work</div>
+      <div class="section-label">Portfolio</div>
       <h2>Featured Design Work</h2>
       <p class="section-desc">A showcase of my creative journey in graphic design</p>
     </div>
     <div class="project-grid">
-      <div class="project-card" tabindex="0" onclick="openModal('LH44.jpg')">
+      <div class="project-card" onclick="openModal('LH44.jpg', 'Lewis Hamilton Tribute')">
         <div class="project-image-wrapper">
-          <img src="LH44.jpg" alt="Lewis Hamilton Tribute" class="project-image" />
+          <img src="LH44.jpg" alt="Lewis Hamilton Tribute" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=Lewis+Hamilton'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1251,15 +1042,12 @@
         <div class="project-info">
           <h3>Lewis Hamilton Tribute</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Photoshop, Illustrator, Figma<br>
-            Celebrating F1 excellence through advanced photo editing and racing-inspired visual storytelling.
-          </p>
+          <p><strong>Tools:</strong> Photoshop, Illustrator, Figma<br>Celebrating F1 excellence through advanced photo editing and racing-inspired visual storytelling.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('CR7.jpg')">
+      <div class="project-card" onclick="openModal('CR7.jpg', 'Cristiano Ronaldo Tribute')">
         <div class="project-image-wrapper">
-          <img src="CR7.jpg" alt="Cristiano Ronaldo Career Poster" class="project-image" />
+          <img src="CR7.jpg" alt="Cristiano Ronaldo" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=CR7'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1267,15 +1055,12 @@
         <div class="project-info">
           <h3>Cristiano Ronaldo Tribute</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Canva, Photoshop<br>
-            Multi-layered composition showcasing CR7's legendary football journey and achievements.
-          </p>
+          <p><strong>Tools:</strong> Canva, Photoshop<br>Multi-layered composition showcasing CR7's legendary football journey and achievements.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('LM10.jpg')">
+      <div class="project-card" onclick="openModal('LM10.jpg', 'Lionel Messi Tribute')">
         <div class="project-image-wrapper">
-          <img src="LM10.jpg" alt="Lionel Messi - The GOAT" class="project-image" />
+          <img src="LM10.jpg" alt="Lionel Messi" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=Messi'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1283,15 +1068,12 @@
         <div class="project-info">
           <h3>Lionel Messi Tribute</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Canva, Photoshop<br>
-            Epic multi-era design celebrating Messi's unparalleled legacy in football history.
-          </p>
+          <p><strong>Tools:</strong> Canva, Photoshop<br>Epic multi-era design celebrating Messi's unparalleled legacy in football history.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('NJR.jpg')">
+      <div class="project-card" onclick="openModal('NJR.jpg', 'Neymar Jr Tribute')">
         <div class="project-image-wrapper">
-          <img src="NJR.jpg" alt="The Magician — Neymar Jr" class="project-image" />
+          <img src="NJR.jpg" alt="Neymar Jr" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=Neymar'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1299,15 +1081,12 @@
         <div class="project-info">
           <h3>The Magician — Neymar Jr</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Canva, Photoshop<br>
-            Dynamic visual tribute capturing Neymar's magical skills and career highlights.
-          </p>
+          <p><strong>Tools:</strong> Canva, Photoshop<br>Dynamic visual tribute capturing Neymar's magical skills and career highlights.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('Lamborghini.jpg')">
+      <div class="project-card" onclick="openModal('Lamborghini.jpg', 'Lamborghini Invencible')">
         <div class="project-image-wrapper">
-          <img src="Lamborghini.jpg" alt="Lamborghini Invencible" class="project-image" />
+          <img src="Lamborghini.jpg" alt="Lamborghini" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=Lamborghini'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1315,15 +1094,12 @@
         <div class="project-info">
           <h3>Lamborghini Invencible</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Photoshop, Illustrator<br>
-            Futuristic hypercar visualization with dramatic lighting and geometric precision.
-          </p>
+          <p><strong>Tools:</strong> Photoshop, Illustrator<br>Futuristic hypercar visualization with dramatic lighting and geometric precision.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('GT3 RS.jpg')">
+      <div class="project-card" onclick="openModal('GT3 RS.jpg', 'Porsche GT3 RS')">
         <div class="project-image-wrapper">
-          <img src="GT3 RS.jpg" alt="Porsche GT3 RS Poster" class="project-image" />
+          <img src="GT3 RS.jpg" alt="Porsche GT3 RS" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=Porsche+GT3'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1331,15 +1107,12 @@
         <div class="project-info">
           <h3>Porsche GT3 RS</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Photoshop, Figma<br>
-            Multi-perspective composition showcasing the engineering beauty of the GT3 RS.
-          </p>
+          <p><strong>Tools:</strong> Photoshop, Figma<br>Multi-perspective composition showcasing the engineering beauty of the GT3 RS.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('BMW M4.jpg')">
+      <div class="project-card" onclick="openModal('BMW M4.jpg', 'BMW M4 CSL')">
         <div class="project-image-wrapper">
-          <img src="BMW M4.jpg" alt="BMW M4 CSL Poster" class="project-image" />
+          <img src="BMW M4.jpg" alt="BMW M4" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=BMW+M4'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1347,15 +1120,12 @@
         <div class="project-info">
           <h3>BMW M4 CSL</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Figma, Photoshop<br>
-            Speed and precision are visualized through split-view design and accent color grading.
-          </p>
+          <p><strong>Tools:</strong> Figma, Photoshop<br>Speed and precision visualized through split-view design and accent color grading.</p>
         </div>
       </div>
-      <div class="project-card" tabindex="0" onclick="openModal('SRT.png')">
+      <div class="project-card" onclick="openModal('SRT.png', 'Dodge Challenger SRT')">
         <div class="project-image-wrapper">
-          <img src="SRT.png" alt="Dodge Challenger" class="project-image" />
+          <img src="SRT.png" alt="Dodge Challenger" class="project-image" onerror="this.src='https://via.placeholder.com/600x280/1e293b/6366f1?text=Challenger'" />
           <div class="project-overlay">
             <span class="view-project">View Project →</span>
           </div>
@@ -1363,92 +1133,72 @@
         <div class="project-info">
           <h3>Dodge Challenger SRT</h3>
           <span class="project-tag">Graphic Design</span>
-          <p>
-            <strong>Tools:</strong> Photoshop<br>
-            Raw V8 power and muscle-car heritage captured in bold visual design.
-          </p>
+          <p><strong>Tools:</strong> Photoshop<br>Raw V8 power and muscle-car heritage captured in bold visual design.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Development Projects Section -->
   <section class="section reveal" id="dev-projects">
     <div class="section-header">
-      <div class="section-label">Project</div>
+      <div class="section-label">Code & Design</div>
       <h2>Development Projects</h2>
       <p class="section-desc">Where design meets development</p>
     </div>
     <div class="dev-grid">
       <div class="dev-card">
-        <div class="dev-icon">💻</div>
+        <span class="dev-icon">💻</span>
         <h3>Personal Portfolio</h3>
         <p class="dev-tech">HTML • CSS • JavaScript</p>
-        <p class="dev-description">
-          Responsive portfolio website showcasing design and development work with smooth interactions and modern UI.
-        </p>
+        <p class="dev-description">Responsive portfolio website showcasing design and development work with smooth interactions and modern UI.</p>
         <div class="dev-links">
           <a href="https://heartydj.github.io/Personal-Portfolio/" class="dev-link" target="_blank" rel="noopener">View Live →</a>
           <a href="https://github.com/heartydj/Personal-Portfolio" class="dev-link secondary" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-    </div>
-      <div class="dev-grid">
       <div class="dev-card">
-        <div class="dev-icon">💻</div>
+        <span class="dev-icon">💰</span>
         <h3>BudgetWise</h3>
         <p class="dev-tech">HTML • CSS • JavaScript</p>
-        <p class="dev-description">
-           Track expenses, set budgets, and gain insights into your spending habits with our intelligent budget tracker.
-        </p>
+        <p class="dev-description">Smart budget tracking application with expense categorization, visual analytics, and financial insights.</p>
         <div class="dev-links">
           <a href="https://heartydj.github.io/BudgetWise/" class="dev-link" target="_blank" rel="noopener">View Live →</a>
           <a href="https://github.com/heartydj/BudgetWise" class="dev-link secondary" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <div class="dev-grid">
       <div class="dev-card">
-        <div class="dev-icon">💻</div>
-        <h3>Scholarship door</h3>
+        <span class="dev-icon">🎓</span>
+        <h3>Scholarship Portal</h3>
         <p class="dev-tech">HTML • CSS • JavaScript</p>
-        <p class="dev-description">
-          Scholarship Portal — OCR & Community Detection
-        </p>
+        <p class="dev-description">Comprehensive scholarship management system with OCR capabilities and community detection features.</p>
         <div class="dev-links">
-          <a href="https://heartydj.github.io/BudgetWise/" class="dev-link" target="_blank" rel="noopener">View Live →</a>
-          <a href="https://github.com/heartydj/BudgetWise" class="dev-link secondary" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://heartydj.github.io/scholarship-portal/" class="dev-link" target="_blank" rel="noopener">View Live →</a>
+          <a href="https://github.com/heartydj/scholarship-portal" class="dev-link secondary" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
       <div class="dev-card">
-        <div class="dev-icon">🎮</div>
+        <span class="dev-icon">🎮</span>
         <h3>Guessing Game</h3>
         <p class="dev-tech">HTML • CSS</p>
-        <p class="dev-description">
-          Interactive number-guessing game with a clean UI and an engaging user experience.
-        </p>
+        <p class="dev-description">Interactive number guessing game featuring clean UI design and engaging user experience.</p>
         <div class="dev-links">
-           
           <a href="https://github.com/heartydj/numberguess" class="dev-link" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
       </div>
       <div class="dev-card">
-        <div class="dev-icon">✓</div>
+        <span class="dev-icon">✓</span>
         <h3>To-Do-List App</h3>
         <p class="dev-tech">HTML • CSS • JavaScript</p>
-        <p class="dev-description">
-          Feature-rich task management app with local storage persistence and smooth animations.
-        </p>
+        <p class="dev-description">Feature-rich task management app with local storage persistence and smooth animations.</p>
         <div class="dev-links">
           <a href="https://github.com/heartydj/to-do-list" class="dev-link" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
       </div>
       <div class="dev-card">
-        <div class="dev-icon">🚚</div>
+        <span class="dev-icon">🚚</span>
         <h3>Load Locator</h3>
         <p class="dev-tech">Figma UI/UX Prototype</p>
-        <p class="dev-description">
-          Modern logistics app prototype for heavy vehicle drivers featuring load tracking and route optimization.
-        </p>
+        <p class="dev-description">Modern logistics app prototype for heavy vehicle drivers featuring load tracking and route optimization.</p>
         <div class="dev-links">
           <a href="https://www.figma.com/proto/68xRhZQHSyKubQW7lTw0eS/load-truck?page-id=0%3A1&node-id=44-49&p=f&viewport=-927%2C125%2C0.13&t=SuEGMrEIWk6blsiY-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=44%3A49" class="dev-link" target="_blank" rel="noopener">View Prototype →</a>
         </div>
@@ -1456,7 +1206,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section class="skills section reveal" id="skills">
     <div class="section-header">
       <div class="section-label">Expertise</div>
@@ -1484,7 +1233,7 @@
         <span class="skill-icon">🖼️</span>
         <div class="skill-name">Photoshop</div>
       </div>
-       <div class="skill-card">
+      <div class="skill-card">
         <span class="skill-icon">🎭</span>
         <div class="skill-name">Illustrator</div>
       </div>
@@ -1509,7 +1258,7 @@
         <div class="skill-name">Team Management</div>
       </div>
       <div class="skill-card">
-        <span class="skill-icon">🤝</span>
+        <span class="skill-icon">🎉</span>
         <div class="skill-name">Event Management</div>
       </div>
       <div class="skill-card">
@@ -1523,7 +1272,6 @@
     </div>
   </section>
 
-  <!-- Education Section -->
   <section class="education section reveal" id="education">
     <div class="section-header">
       <div class="section-label">Background</div>
@@ -1549,7 +1297,6 @@
     </div>
   </section>
 
-  <!-- Contact Footer -->
   <footer id="contact" class="footer">
     <h2>Let's Create Something Amazing</h2>
     <p class="footer-note">I'm currently available for full-time opportunities and freelance projects</p>
@@ -1560,12 +1307,8 @@
     <p class="footer-copyright">© 2025 Dharani Jayan E. Crafted with passion and precision.</p>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">
-    ↑
-  </div>
+  <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</div>
 
-  <!-- Image Modal -->
   <div id="imageModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modalImg" alt="Project preview"/>
@@ -1573,7 +1316,6 @@
   </div>
 
   <script>
-    // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     
@@ -1582,7 +1324,6 @@
       mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
     });
 
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
@@ -1590,79 +1331,52 @@
       });
     });
 
-    // Smooth scroll for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          const offset = 80;
-          const targetPosition = target.offsetTop - offset;
           window.scrollTo({
-            top: targetPosition,
+            top: target.offsetTop - 80,
             behavior: 'smooth'
           });
         }
       });
     });
 
-    // Active navigation highlight
     const sections = document.querySelectorAll('.section, .hero');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    function highlightNav() {
+    function handleScroll() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      
+      const scrollTop = document.querySelector('.scroll-top');
+      scrollTop.classList.toggle('visible', window.scrollY > 300);
+      
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        if (window.scrollY >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
 
       navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
       });
-    }
 
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    function handleScroll() {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-      highlightNav();
-      
-      // Scroll to top button
-      const scrollTop = document.querySelector('.scroll-top');
-      if (window.scrollY > 300) {
-        scrollTop.classList.add('visible');
-      } else {
-        scrollTop.classList.remove('visible');
-      }
-
-      // Reveal animations
-      const reveals = document.querySelectorAll('.reveal');
-      reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
+      document.querySelectorAll('.reveal').forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < windowHeight - elementVisible) {
+        if (elementTop < window.innerHeight - 150) {
           element.classList.add('active');
         }
       });
     }
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
-    // Modal functions
     function openModal(src, alt) {
       const modal = document.getElementById("imageModal");
       const modalImg = document.getElementById("modalImg");
@@ -1670,72 +1384,25 @@
       
       modal.classList.add("open");
       modalImg.src = src;
+      modalImg.onerror = () => {
+        modalImg.src = 'https://via.placeholder.com/1200x800/1e293b/6366f1?text=' + encodeURIComponent(alt);
+      };
       caption.textContent = alt || '';
       document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
-      const modal = document.getElementById("imageModal");
-      modal.classList.remove("open");
+      document.getElementById("imageModal").classList.remove("open");
       document.body.style.overflow = 'auto';
     }
 
-    // Close modal on outside click
-    window.onclick = function(event) {
-      const modal = document.getElementById("imageModal");
-      if (event.target === modal) {
-        closeModal();
-      }
-    }
+    window.onclick = (e) => {
+      if (e.target === document.getElementById("imageModal")) closeModal();
+    };
 
-    // Close modal on Escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
-    });
-
-    // Keyboard accessibility for project cards
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          card.click();
-        }
-      });
-    });
-
-    // Performance optimization: Debounce scroll events
-    function debounce(func, wait) {
-      let timeout;
-      return function executedFunction(...args) {
-        const later = () => {
-          clearTimeout(timeout);
-          func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-      };
-    }
-
-    window.addEventListener('scroll', debounce(handleScroll, 10));
-
-    // Add parallax effect to hero
-    window.addEventListener('scroll', () => {
-      const hero = document.querySelector('.hero-content');
-      const scrolled = window.scrollY;
-      if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.4}px)`;
-        hero.style.opacity = 1 - (scrolled / 600);
-      }
+      if (e.key === 'Escape') closeModal();
     });
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
